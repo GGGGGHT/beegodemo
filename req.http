@@ -1,0 +1,7 @@
+POST http://localhost:8080/good/add
+
+###
+DELETE http://localhost:8080/good/delete
+
+###
+PUT http://localhost:8080/good/edit
