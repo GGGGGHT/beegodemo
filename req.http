@@ -1,7 +1,38 @@
 POST http://localhost:8080/good/add
+#Content-Type: application/json
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+name=zs
 
 ###
 DELETE http://localhost:8080/good/delete
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+id=1
+
+
+###
+POST http://localhost:8080/good/xml
+Accept: application/json
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<article>
+<content type="string">zhang san</content>
+<title type="string">san zhang</title>
+</article>
+
 
 ###
 PUT http://localhost:8080/good/edit
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+title=zs&content=ceshi
+
+
+
+### 动态路由
+GET http://localhost:8080/api/1xx

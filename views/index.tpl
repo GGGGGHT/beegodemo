@@ -91,5 +91,31 @@
   <div class="backdrop"></div>
 
   <script src="/static/js/reload.min.js"></script>
+  <p>{{.title}}</p>
+  <p>{{.num}}</p>
+  <p>{{.flag}}</p>
+  <br/>
+  <p>{{.struct}}</p>
+  <p>{{.struct.Title}}</p>
+  <p>{{.struct.Content}}</p>
+
+
+    {{$title := .title}}
+    <p>{{$title}}
+    </p>
+
+    <h2>模板中绑定切片</h2>
+    <ul>
+        {{range $key,$val := .sliceList}}
+            <li>{{$key}} --> {{$val}}</li>
+        {{end}}
+    </ul>
+
+     <h2>遍历结构体切片</h2>
+        <ul>
+            {{range $key,$val := .structSlice}}
+                <li>{{$key}} --> {{$val}}</li>
+            {{end}}
+        </ul>
 </body>
 </html>

@@ -20,6 +20,14 @@ func init() {
 	beego.Router("/good", &controllers.GoodController{})
 	beego.Router("/good/add", &controllers.GoodController{}, "POST:DoAdd")
 	beego.Router("/good/edit", &controllers.GoodController{}, "PUT:DoEdit")
-	beego.Router("/good/delete", &controllers.GoodController{}, "DELETE:DoDelete")
+	beego.Router("/good/delete", &controllers.GoodController{}, "delete:DoDelete")
+	beego.Router("/good/xml", &controllers.GoodController{}, "POST:XML")
 
+	beego.Router("/api/:id", &controllers.APIController{})
+
+	beego.Router("/login", &controllers.LoginController{})
+	beego.Router("/dologin", &controllers.LoginController{}, "POST:DoLogin")
+
+	beego.Router("/reg", &controllers.RegisterController{})
+	beego.Router("/doReg", &controllers.RegisterController{}, "POST:DoRegister")
 }
