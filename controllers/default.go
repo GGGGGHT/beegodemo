@@ -27,6 +27,12 @@ func (c *MainController) Get() {
 		{"news 3", "content 3"},
 	}
 
+	c.Data["isLogin"] = true
+	c.Data["isHome"] = false
+	c.Data["isAbout"] = true
+
+	c.Data["n1"] = 22
+	c.Data["n2"] = 6
 	c.TplName = "index.tpl"
 }
 

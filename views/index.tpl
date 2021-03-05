@@ -74,6 +74,8 @@
 </head>
 
 <body>
+     <!--引入外部模板后最后的.不要忘记 不加.也可以 但是不会渲染当前绑定的数据-->
+    {{template "/public/header.html" .}}
   <header>
     <h1 class="logo">Welcome to Beego</h1>
     <div class="description">
@@ -117,5 +119,48 @@
                 <li>{{$key}} --> {{$val}}</li>
             {{end}}
         </ul>
+
+      <h2>模板中的条件判断</h2>
+      {{if .isLogin}}
+            <p>isLogin为true</p>
+      {{end}}
+
+      {{if .isHome}}
+           <p>isHome为true</p>
+      {{else}}
+            <p>isHome为false</p>
+      {{end}}
+      <br/>
+
+      {{if false}}
+         <p>false 1</p>
+      {{else if false}}
+          <p>false 2</p>
+      {{else}}
+          <p>true 1</p>
+      {{end}}
+      <br/>
+      <p>if 条件判断 </p>
+       <!--
+            eq ==
+            ne !=
+            lt <
+            gt >
+            le <=
+            gt >=
+        -->
+      {{if gt .n1 .n2}}
+        <p>{{.n1}} > {{.n2}}</p>
+      {{end}}
+
+      {{if eq .n1 .n2}}
+          <p>{{.n1}} == {{.n2}}</p>
+      {{else}}
+          <p>{{.n1}} != {{.n2}}</p>
+      {{end}}
+
+      <h2>外部自定义模板</h2>
+      {{template "/public/footer.html" .}}
+
 </body>
 </html>

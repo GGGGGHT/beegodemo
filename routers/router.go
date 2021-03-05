@@ -30,4 +30,6 @@ func init() {
 
 	beego.Router("/reg", &controllers.RegisterController{})
 	beego.Router("/doReg", &controllers.RegisterController{}, "POST:DoRegister")
+
+	beego.Router("/inner", &controllers.InnerController{})
 }
