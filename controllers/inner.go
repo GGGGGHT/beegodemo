@@ -17,5 +17,7 @@ func (c *InnerController) Get() {
 	userInfo["username"] = "zs"
 	userInfo["age"] = 20
 	c.Data["m"] = userInfo
+	c.Data["unix"] = 1587880013
+
 	c.TplName = "innerAPI.html"
 }
