@@ -13,7 +13,7 @@ type GoodController struct {
 
 func (c *GoodController) Get() {
 	// c.Data["Website"] = "beego.me"
-
+	c.Data["name"] = c.GetSession("username")
 	c.Data["title"] = "Beego Test"
 	c.Data["num"] = "1"
 	c.TplName = "good.html"

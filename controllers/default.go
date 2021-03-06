@@ -45,9 +45,8 @@ func (c *MainController) Get() {
 		beego.Info("set value error")
 	}
 
-	beego.BConfig
 	beego.Info("ok...")
-
+	c.SetSession("username", "张三")
 	c.TplName = "index.tpl"
 }
 

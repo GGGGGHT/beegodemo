@@ -162,5 +162,7 @@
       <h2>外部自定义模板</h2>
       {{template "/public/footer.html" .}}
 
+
+    设置session完成 跳转到<a href="good.html">这里</a>进行查看
 </body>
 </html>

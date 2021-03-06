@@ -3,6 +3,7 @@ package routers
 import (
 	"beegodemo/controllers"
 	"github.com/astaxie/beego"
+	_ "github.com/astaxie/beego/session/redis"
 )
 
 func init() {
@@ -34,4 +35,6 @@ func init() {
 	beego.Router("/inner", &controllers.InnerController{})
 
 	beego.Router("/ck", &controllers.CookieController{})
+
+	beego.Router("/session", &controllers.SessionController{})
 }
