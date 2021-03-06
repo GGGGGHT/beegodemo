@@ -32,4 +32,6 @@ func init() {
 	beego.Router("/doReg", &controllers.RegisterController{}, "POST:DoRegister")
 
 	beego.Router("/inner", &controllers.InnerController{})
+
+	beego.Router("/ck", &controllers.CookieController{})
 }
